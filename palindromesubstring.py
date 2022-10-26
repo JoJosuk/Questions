@@ -1,10 +1,7 @@
 class Solution:
     def longestPalindrome(s):
-        # [b][][bad]
-        # a b c
         flag=0
         if len(s) <=1:
-            # for empty string and single char
             print (s)
             flag=1
         elif len(s) == 2:
@@ -12,9 +9,8 @@ class Solution:
             flag=1
         
         a = [s[0]]
-        b = '' # empty for even sizes
+        b = '' 
         c = list(s[-1:0:-1])
-        # c reversed in order to allow for pop() instead of pop(0) which is in O(n) time
         
         maxPalin = ''
         while len(c) > 0:
@@ -23,15 +19,15 @@ class Solution:
             for j in range(0, min(len(a), len(c))):
                 char = c[-1-j]
                 if a[-1-j] == char:
-                    palinC = char + palinC + char #O(1)
+                    palinC = char + palinC + char 
                 else:
                     break
 
             if b != '':
-                a.append(b) #O(1)
+                a.append(b) 
                 b = ''
             else:
-                b = c.pop() #O(1)
+                b = c.pop() 
             
             if len(palinC) > len(maxPalin):
                 maxPalin = palinC

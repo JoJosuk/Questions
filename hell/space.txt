@@ -1,0 +1,8 @@
+print('s c p a b m t r d f')
+print('a e o i r u l h d k')
+print('r a n t v i l f c r')
+print('e i t a n l s r b k')
+print('e i s t r n a l o')
+print('e n s r i t a d l')
+print('i s n t r g d a l y')
+print('s e d g y h r t l a')
